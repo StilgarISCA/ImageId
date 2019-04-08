@@ -56,9 +56,12 @@ namespace ImageId
 
       private static void DisplayResults( ImageAnalysis imageAnalysis, string imageUrl )
       {
+         Console.WriteLine();
          Console.WriteLine( $"This image looks like...{imageAnalysis.Description.Captions[0].Text}" );
+         Console.WriteLine();
          Console.WriteLine( "Here are some tags to describe it: " );
          Console.WriteLine( string.Join( ",", imageAnalysis.Description.Tags ) );
+         Console.WriteLine();
       }
 
       private static string PromptForImageUrl()
